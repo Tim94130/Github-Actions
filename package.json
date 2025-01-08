@@ -4,11 +4,11 @@
   "description": "A simple GitHub Action project with linting",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint './**/*.js'"
   },
   "dependencies": {},
   "devDependencies": {
-    "eslint": "^8.0.0"
+    "eslint": "^8.57.1"
   },
   "author": "Your Name",
   "license": "MIT"
