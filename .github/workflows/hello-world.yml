@@ -1,7 +1,10 @@
-name: Hello World Workflow
+name: CI Workflow
 
 on:
   push:
+    branches:
+      - main
+  pull_request:
     branches:
       - main
 
@@ -9,5 +12,20 @@ jobs:
   greeting:
     runs-on: ubuntu-latest
     steps:
+      # Étape 1 : Afficher "Hello World"
       - name: Print Hello World
         run: echo "Hello World"
+
+      # Étape 2 : Configurer Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      # Étape 3 : Installer les dépendances
+      - name: Install Dependencies
+        run: npm install
+
+      # Étape 4 : Lancer linting carré werenoi
+      - name: Run Lint
+        run: npm run lint
