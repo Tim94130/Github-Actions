@@ -19,9 +19,9 @@ jobs:
 
       # Étape 2 : Configurez Node.js
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 16
+          node-version: 20
 
       # Étape 3 : Installez les dépendances
       - name: Install Dependencies
