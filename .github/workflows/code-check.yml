@@ -13,20 +13,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Étape 1 : Vérifier le dépôt actuel
+      # Étape 1 : Vérifiez le code source
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Étape 2 : Configurer Node.js
+      # Étape 2 : Configurez Node.js
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 16
 
-      # Étape 3 : Installer les dépendances
+      # Étape 3 : Installez les dépendances
       - name: Install Dependencies
         run: npm install
 
-      # Étape 4 : Lancer linting
+      # Étape 4 : Lancer le linting
       - name: Run Lint
         run: npm run lint
